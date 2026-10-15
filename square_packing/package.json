@@ -1,0 +1,21 @@
+{
+  "name": "square-packing",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "图 → 方块填充（矩形对偶）/ 圆盘填充（相切圆，四角 90°）：离散 Yamabe (Ricci) 流 + 等距铺展 + regular edge labeling / 相切度量 + 目标曲率 Newton（另有极大填充 mode:'maximal'）",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}
