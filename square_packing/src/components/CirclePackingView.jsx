@@ -110,7 +110,7 @@ export default function CirclePackingView({ result, cp, hover, setHover, show, b
  * 尺度锁住；边界点一多，边界半径就必然两极分化。墙上度 2 的「耳朵」更狠：它只有一个三角形，
  * 要求角度和恰好 180°，只能靠 r → 0 逼近 —— 那是解的边界，不是解析解。
  * 同一个三角剖分换成极大填充（所有边界圆共外圆）数字不同（美国 754 对这里 1.2e4），
- * 两种边界条件都躲不掉大比值，README 有对照表。
+ * 两种边界条件都躲不掉大比值，NOTES.md 有对照表。
  */
 export function degenerateNote(cp, mesh) {
   if (!cp || cp.ratioBoundary <= DEGENERATE_RATIO) return null;
@@ -120,5 +120,5 @@ export function degenerateNote(cp, mesh) {
     + `外框是边界圆心的矩形（第 t 条边 = Σ(r_i + r_{i+1})），它的周长被内点的尺度锁住，`
     + `于是边界点 ${nB} 个、内点 ${mesh.nv - nB} 个这种情况下，边界半径必然两极分化，`
     + `最小半径 ${lo.toExponential(2)}。换一种边界条件（极大填充：所有边界圆共外圆）也躲不掉，`
-    + `只是数字不同 —— README 里两种都列了。`;
+    + `只是数字不同 —— NOTES.md 里两种都列了。`;
 }

@@ -252,9 +252,9 @@ for (const { id, r } of stalled) {
 }
 if (stalled.length) {
   console.log(`    例：${stalled[0].r.flow.note}`);
-  console.log('    → 这是离散共形类的数学障碍，不是实现 bug；见 README「Ricci 流在部分剖分上停住」一节。');
+  console.log('    → 这是离散共形类的数学障碍，不是实现 bug；见 NOTES.md「事实 2」一节。');
 } else {
-  console.log('    这一批图全都收敛了（换更大的图/别的四边形就会出现停住的，见 README）。');
+  console.log('    这一批图全都收敛了（换更大的图/别的四边形就会出现停住的，见 NOTES.md）。');
 }
 
 // 6c. 全表：长宽比与图的规模无关（同一四边形）
@@ -515,7 +515,7 @@ for (const preset of [...PRESETS, ...MAP_PRESETS]) {
     console.log(`        边界半径最大 4：${rows.slice(-4).map((x) => `${x.n}(度${x.d})=${x.r.toExponential(1)}`).join(' ')}`);
     console.log(`        → 比值 ${cp.ratioBoundary.toFixed(0)} 是**固有**的：外框是边界圆心的矩形，`);
     console.log(`          边长 = Σ(r_i + r_{i+1})，整圈周长被内点的尺度锁住；边界点 ${k} 个、内点 ${mesh.nv - k} 个，`);
-    console.log('          边界半径必然两极分化（B 组的极大填充也躲不掉，只是数字不同）—— 见 README。');
+    console.log('          边界半径必然两极分化（B 组的极大填充也躲不掉，只是数字不同）—— 见 NOTES.md。');
   }
   console.log('');
 }
